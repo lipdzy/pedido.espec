@@ -50,6 +50,7 @@
             position: relative;
             transform: rotate(-45deg);
             animation: pulse 1s infinite;
+            margin-bottom: 30px;
         }
         .heart::before, .heart::after {
             content: "";
@@ -98,7 +99,8 @@
         <h2>Ouça nossa música especial!</h2>
         <div class="spotify-romantic">
             <p class="spotify-message">Essa música me faz lembrar de você... Cada nota, cada palavra... ❤</p>
-            <iframe style="border-radius:12px" src="https://open.spotify.com/intl-pt/track/1DLKuppSYytOuxhtI6KBGu?si=979cfd7723e6426c" width="300" height="80" frameborder="0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
+            <!-- Widget do Spotify incorporado -->
+            <iframe style="border-radius:12px" src="Ohttps://open.spotify.com/intl-pt/track/1DLKuppSYytOuxhtI6KBGu?si=6df31db68f21477c" width="300" height="380" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
         </div>
         <button onclick="continueToHeart()">Clique para continuar</button>
     </div>
@@ -108,7 +110,7 @@
         <button onclick="showDeclaration()">Clique para continuar</button>
     </div>
     <div class="container" id="declarationSection">
-        <img src="sua-imagem.jpg" alt="Nossa foto">
+        <img src="sarah.html.jpg" alt="foto da minha namorada">
         <p>Você é a melhor parte da minha vida! Te amo para sempre! ❤️</p>
         <button onclick="showCounter()">Veja há quanto tempo estamos juntos</button>
     </div>
@@ -130,40 +132,19 @@
             document.getElementById('declarationSection').style.display = 'flex';
         }
         function showCounter() {
-            document.getElementById('declarationSection').style.display = 'none';
+            document.getElementId('declarationSection').style.display = 'none';
             document.getElementById('counterSection').style.display = 'flex';
             startCounter();
         }
         function startCounter() {
-            let startDate = new Date('2020-06-01');
+            let startDate = new Date('2024-12-21');
             setInterval(() => {
                 let now = new Date();
                 let diff = now - startDate;
                 let days = Math.floor(diff / (1000 * 60 * 60 * 24));
-                document.getElementById('contador').innerText = `${days} dias de amor!`;
-            }, 1000);
-        }
-    </script>
-</body>
-</html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+                document.getElementById('contador').innerText = `${
+::contentReference[oaicite:1]{index=1}
+ 
 
 
 
