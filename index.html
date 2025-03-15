@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minha Declaração</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(to right, #ff758c, #ff7eb3);
+            text-align: center;
+            font-family: 'Arial', sans-serif;
+            overflow: hidden;
+            color: white;
+        }
+        .container {
+            display: none;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+        .welcome {
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+            justify-content: center;
+            align-items: center;
+        }
+        .spotify-romantic {
+            background: rgba(255, 255, 255, 0.2);
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.5);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            max-width: 350px;
+        }
+        .spotify-message {
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+        .heart {
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            position: relative;
+            transform: rotate(-45deg);
+            animation: pulse 1s infinite;
+        }
+        .heart::before, .heart::after {
+            content: "";
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            border-radius: 50%;
+            position: absolute;
+        }
+        .heart::before {
+            top: -50px;
+            left: 0;
+        }
+        .heart::after {
+            left: 50px;
+            top: 0;
+        }
+        @keyframes pulse {
+            0% { transform: scale(1) rotate(-45deg); }
+            50% { transform: scale(1.2) rotate(-45deg); }
+            100% { transform: scale(1) rotate(-45deg); }
+        }
+        button {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 20px;
+            background: white;
+            color: #ff758c;
+            font-size: 16px;
+            cursor: pointer;
+            margin: 10px;
+        }
+        img {
+            width: 300px;
+            border-radius: 20px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="welcome">
+        <h1>Bem-vinda, Sarah!</h1>
+        <button onclick="startExperience()">Clique aqui para continuar</button>
+    </div>
+    <div class="container" id="spotifySection">
+        <h2>Ouça nossa música especial!</h2>
+        <div class="spotify-romantic">
+            <p class="spotify-message">Essa música me faz lembrar de você... Cada nota, cada palavra... ❤</p>
+            <iframe style="border-radius:12px" src="https://open.spotify.com/intl-pt/track/1DLKuppSYytOuxhtI6KBGu?si=979cfd7723e6426c" width="300" height="80" frameborder="0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
+        </div>
+        <button onclick="continueToHeart()">Clique para continuar</button>
+    </div>
+    <div class="container" id="heartSection">
+        <div class="heart"></div>
+        <p>Meu coração bate por você!</p>
+        <button onclick="showDeclaration()">Clique para continuar</button>
+    </div>
+    <div class="container" id="declarationSection">
+        <img src="sua-imagem.jpg" alt="Nossa foto">
+        <p>Você é a melhor parte da minha vida! Te amo para sempre! ❤️</p>
+        <button onclick="showCounter()">Veja há quanto tempo estamos juntos</button>
+    </div>
+    <div class="container" id="counterSection">
+        <h2>Estamos juntos há:</h2>
+        <p id="contador"></p>
+    </div>
+    <script>
+        function startExperience() {
+            document.querySelector('.welcome').style.display = 'none';
+            document.getElementById('spotifySection').style.display = 'flex';
+        }
+        function continueToHeart() {
+            document.getElementById('spotifySection').style.display = 'none';
+            document.getElementById('heartSection').style.display = 'flex';
+        }
+        function showDeclaration() {
+            document.getElementById('heartSection').style.display = 'none';
+            document.getElementById('declarationSection').style.display = 'flex';
+        }
+        function showCounter() {
+            document.getElementById('declarationSection').style.display = 'none';
+            document.getElementById('counterSection').style.display = 'flex';
+            startCounter();
+        }
+        function startCounter() {
+            let startDate = new Date('2020-06-01');
+            setInterval(() => {
+                let now = new Date();
+                let diff = now - startDate;
+                let days = Math.floor(diff / (1000 * 60 * 60 * 24));
+                document.getElementById('contador').innerText = `${days} dias de amor!`;
+            }, 1000);
+        }
+    </script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
